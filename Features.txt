@@ -6,6 +6,8 @@
 
 4) Custome query implmentation inside FlightRepository class
 
+5) Spring security implemented with encryption and authorization
+
 
 
 
