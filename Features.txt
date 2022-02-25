@@ -1,0 +1,18 @@
+1) How to handle particular field (id) which have been used in multiple Class, added in the AbstractEntity class
+
+2) return type of save and .findById(id).orElse(null) and .findById(id).get();
+
+3) pass the arguments (parameter) from postman(done)
+
+4) Custome query implmentation inside FlightRepository class
+
+
+
+
+
+
+
+
+
+
+
