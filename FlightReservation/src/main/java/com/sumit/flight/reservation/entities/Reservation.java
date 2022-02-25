@@ -4,31 +4,24 @@ package com.sumit.flight.reservation.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Reservation {
+public class Reservation extends AbstractEntity{
 
-	@Id
-	@Column(name="ID")
-	private int id;
 	@Column(name="CHECKED_IN")
 	private boolean chk_in;
 	@Column(name="NUMBER_OF_BAGS")
 	private int no_of_bags;
 	@OneToOne
-	@Column(name="PASSENGER_ID")
+	@JoinColumn(name="PASSENGER_ID")
 	private Passenger pid;
 	@OneToOne
-	@Column(name="FLIGHT_ID")
+	@JoinColumn(name="FLIGHT_ID")
 	private Flight fid;
 	//private Timestamp created; we will use default time stamp from database
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	public boolean isChk_in() {
 		return chk_in;
 	}

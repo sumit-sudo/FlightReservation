@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 
 @Entity
-public class Passenger {
+public class Passenger extends AbstractEntity{
 
 
 	@Column(name="FIRST_NAME")

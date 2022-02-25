@@ -5,60 +5,66 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 @Entity
 public class Flight extends AbstractEntity{
 
 	@Column(name="FLIGHT_NUMBER")
-	private String fnumber;
+	private String FLIGHT_NUMBER;
 	@Column(name="OPERATING_AIRLINES")
-	private String O_Airlines;
+	private String OPERATING_AIRLINES;
 	@Column(name="DEPARTURE_CITY")
-	private String D_City;
+	private String DEPARTURE_CITY;
 	@Column(name="ARRIVAL_CITY")
-	private String A_City;
+	private String ARRIVAL_CITY;
+	@DateTimeFormat(pattern="dd-MM-yyyy")
+	@Temporal(TemporalType.DATE)
 	@Column(name="DATE_OF_DEPARTURE")
-	private Date d_date;
+	private Date DATE_OF_DEPARTURE;
 	@Column(name="ESTIMATED_DEPARTURE_TIME")
-	private Timestamp est_dep_time;
+	private Timestamp ESTIMATED_DEPARTURE_TIME;
+	public String getFLIGHT_NUMBER() {
+		return FLIGHT_NUMBER;
+	}
+	public void setFLIGHT_NUMBER(String fLIGHT_NUMBER) {
+		FLIGHT_NUMBER = fLIGHT_NUMBER;
+	}
+	public String getOPERATING_AIRLINES() {
+		return OPERATING_AIRLINES;
+	}
+	public void setOPERATING_AIRLINES(String oPERATING_AIRLINES) {
+		OPERATING_AIRLINES = oPERATING_AIRLINES;
+	}
+	public String getDEPARTURE_CITY() {
+		return DEPARTURE_CITY;
+	}
+	public void setDEPARTURE_CITY(String dEPARTURE_CITY) {
+		DEPARTURE_CITY = dEPARTURE_CITY;
+	}
+	public String getARRIVAL_CITY() {
+		return ARRIVAL_CITY;
+	}
+	public void setARRIVAL_CITY(String aRRIVAL_CITY) {
+		ARRIVAL_CITY = aRRIVAL_CITY;
+	}
+	public Date getDATE_OF_DEPARTURE() {
+		return DATE_OF_DEPARTURE;
+	}
+	public void setDATE_OF_DEPARTURE(Date dATE_OF_DEPARTURE) {
+		DATE_OF_DEPARTURE = dATE_OF_DEPARTURE;
+	}
+	public Timestamp getESTIMATED_DEPARTURE_TIME() {
+		return ESTIMATED_DEPARTURE_TIME;
+	}
+	public void setESTIMATED_DEPARTURE_TIME(Timestamp eSTIMATED_DEPARTURE_TIME) {
+		ESTIMATED_DEPARTURE_TIME = eSTIMATED_DEPARTURE_TIME;
+	}
 
-	public String getFnumber() {
-		return fnumber;
-	}
-	public void setFnumber(String fnumber) {
-		this.fnumber = fnumber;
-	}
-	public String getO_Airlines() {
-		return O_Airlines;
-	}
-	public void setO_Airlines(String o_Airlines) {
-		O_Airlines = o_Airlines;
-	}
-	public String getD_City() {
-		return D_City;
-	}
-	public void setD_City(String d_City) {
-		D_City = d_City;
-	}
-	public String getA_City() {
-		return A_City;
-	}
-	public void setA_City(String a_City) {
-		A_City = a_City;
-	}
-	public Date getD_date() {
-		return d_date;
-	}
-	public void setD_date(Date d_date) {
-		this.d_date = d_date;
-	}
-	public Timestamp getEst_dep_time() {
-		return est_dep_time;
-	}
-	public void setEst_dep_time(Timestamp est_dep_time) {
-		this.est_dep_time = est_dep_time;
-	}
 	
 	
 	
